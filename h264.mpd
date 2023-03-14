@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with https://github.com/google/shaka-packager version v2.6.1-634af65-release-->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" xmlns:cenc="urn:mpeg:cenc:2013" profiles="urn:mpeg:dash:profile:isoff-live:2011" minBufferTime="PT2S" type="dynamic" publishTime="2023-03-14T22:30:04Z" availabilityStartTime="2023-03-14T22:30:03Z" minimumUpdatePeriod="PT5S" timeShiftBufferDepth="PT1800S">
+  <Period id="0" start="PT0S">
+    <AdaptationSet id="0" contentType="video" width="960" height="400" frameRate="24000/1001" segmentAlignment="true" par="12:5">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="6d76f25c-b17f-5e16-b8ea-ef6bbf582d8e"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAMXBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABEiD3Rlc3QgY29udGVudCBpZA==</cenc:pssh>
+      </ContentProtection>
+      <Representation id="0" bandwidth="6090444" codecs="avc1.42c01e" mimeType="video/mp4" sar="1:1">
+        <SegmentTemplate timescale="24000" initialization="seg_init_0.mp4" media="seg_$Time$.m4s" startNumber="1">
+          <SegmentTimeline>
+            <S t="0" d="159159"/>
+            <S t="159159" d="163163"/>
+            <S t="322322" d="130130"/>
+            <S t="452452" d="145145"/>
+            <S t="597597" d="140140"/>
+            <S t="737737" d="128128"/>
+            <S t="865865" d="148148"/>
+            <S t="1014013" d="103103"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" contentType="audio" segmentAlignment="true">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="f3c5e036-1e66-54b2-8f80-49c778b23946"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAMXBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABEiD3Rlc3QgY29udGVudCBpZA==</cenc:pssh>
+      </ContentProtection>
+      <Representation id="1" bandwidth="105234" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <SegmentTemplate timescale="48000" initialization="init.mp4" media="$Number$.m4s" startNumber="1">
+          <SegmentTimeline>
+            <S t="0" d="288768"/>
+            <S t="288768" d="287744" r="2"/>
+            <S t="1152000" d="288768"/>
+            <S t="1440768" d="287744" r="1"/>
+            <S t="2016256" d="221184"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
